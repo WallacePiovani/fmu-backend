@@ -1,4 +1,4 @@
-import { calculaLiquido } from "./modules/calculaLiquido.js";
+import { calculaLiquido } from "../modules/calculaLiquido.js";
 
 let resultado = calculaLiquido(5000, 10);
 

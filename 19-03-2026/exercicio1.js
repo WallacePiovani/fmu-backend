@@ -1,4 +1,4 @@
-import { calcularQuadrado } from "./modules/colecao.js";
+import { calcularQuadrado } from '../modules/colecao.js';
 
 let numero = 5
 let num = calcularQuadrado(numero);

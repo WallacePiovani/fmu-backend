@@ -1,4 +1,4 @@
-import { calcularCubo } from "./modules/colecao.js";
+import {calcularCubo} from '../modules/colecao.js';
 
 let numero = 5
 let num = calcularCubo(numero);
