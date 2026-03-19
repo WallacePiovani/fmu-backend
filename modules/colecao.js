@@ -6,4 +6,4 @@ let calcularCubo = (numero) => {
     return numero ** 3;
 }
 
-module.exports = { calcularQuadrado, calcularCubo }
+export { calcularQuadrado, calcularCubo }
