@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Estamos testando o Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WallacePiovani/fmu-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/WallacePiovani/fmu-backend/issues"
+  },
+  "homepage": "https://github.com/WallacePiovani/fmu-backend#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
