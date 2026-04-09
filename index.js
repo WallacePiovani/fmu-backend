@@ -1,24 +1,35 @@
 import express from 'express';
-import path from 'path';
 
 const app = express ();
+const port = 8080;
 
-app.get('/', (req, res) => {
-    // res.send -> manda uma resposta em texto  
-    res.sendFile(path.resolve('./src/index.html'));
-    // path.resolve -> transforma endereços relativos em absolutos
-    // relativos -> ./src/index.html
-    // absolutos -> C:/Users/Usuario/Desktop/Projeto/src/index.html
+
+const listaAluno = [
+    {
+        id: 1,
+        nome: 'Maria',
+        curso: 'ads'
+
+    },
+    {
+        id: 2,
+        nome: 'João',
+        curso: 'Direito'
+    },
+    {
+        id: 3,
+        nome: 'Lucas',
+        curso: 'Marketing'
+    }
+];
+
+//res.json - é um metodo especializado que garante que o navegador entenda o dicionario listaAluno como um dado estruturado e não como texto.
+
+app.get('/api/alunos',(req, res) =>{
+    res.json(listaAluno); //dados vão chegar no formato JSON
+
 })
 
-app.get('/contato', (req, res) => {
-    res.sendFile(path.resolve('./src/contato.html'));
-})
-
-app.get('/servico', (req, res) => {
-    res.sendFile(path.resolve('./src/servico.html'));
-})
-
-app.listen(8080, () =>{
-    console.log('Servidor rodando na porta 8080')
+app.listen(port, () =>{
+    console.log(`Servidor rodando em http://localhost:${port} e enviando dados JSON para o servidor! API rodando em: http://localhost:${port}/api/alunos`);
 })
